@@ -9,3 +9,14 @@ javascript gw-basic fun project
 # purpose
 found an old project that I started for fun and started adding to it, I doubt it will have any practical use, just something fun to program
 
+# Working direct commands
++ DELETE
++ FILES
++ KILL
++ LIST
++ LOAD
++ PRINT
++ SAVE
+
+# reference
+the reference I am using to make this is [GWBASIC User's Manual - PeatSoft](https://hwiegman.home.xs4all.nl/gw-man/index.html)
