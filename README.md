@@ -1,5 +1,5 @@
-![GitHub](https://img.shields.io/github/license/msfwebdude/jw-web-basic?style=plastic) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/msfwebdude/jw-web-basic?style=plastic)
-![GitHub last commit](https://img.shields.io/github/last-commit/msfwebdude/jw-web-basic?style=plastic)
+![GitHub](https://img.shields.io/github/license/msfwebdude/js-web-basic?style=plastic) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/msfwebdude/js-web-basic?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/msfwebdude/js-web-basic?style=plastic)
 
 # Javascript CPU simulator
 
