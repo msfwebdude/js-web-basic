@@ -10,12 +10,14 @@ javascript gw-basic fun project
 found an old project that I started for fun and started adding to it, I doubt it will have any practical use, just something fun to program
 
 # Working direct commands
++ CLS
 + DELETE
 + FILES
 + KILL
 + LIST
 + LOAD
 + PRINT
++ PSET
 + SAVE
 
 # reference

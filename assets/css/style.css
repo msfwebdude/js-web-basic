@@ -32,3 +32,25 @@ body {
     background-color: transparent;
     z-index: 100;
 }
+
+
+.footer {
+    color: #F0F0F0;
+    font-family: 'Lucida Console', monospace;
+    font-size: 9pt;
+    margin: auto;
+    text-align: center;
+    width: 65%;
+}
+
+.footer a {
+    color: #FFFFFE;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+.footer a img {
+    vertical-align: middle;
+}

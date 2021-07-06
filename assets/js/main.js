@@ -228,6 +228,16 @@ class WebBasic {
   }
 
   startUp(){
+
+    // set dynamic content
+    const dateCurrent = new Date();
+    const dateUpdated = new Date(self.DateUpdated.innerHTML);
+    self.currentYear.innerHTML = dateCurrent.getFullYear();
+    self.DateUpdated.innerHTML = dateUpdated.toLocaleString().replace(',', '');
+    if(!(dateUpdated instanceof Date && isFinite(dateUpdated))) {
+        self.DateUpdated.innerHTML = "unknown";
+    }
+
     this.clear()
     this.write(`Web-BASIC v${this.version}\n(C) Copyright Mike Firoved (MIT License)\nOK\n\n`);
     self.commandWindow.focus()  
@@ -250,6 +260,8 @@ class WebBasic {
       [255, 255,  84, 255], // 14 - yellow
       [255, 255, 255, 255], // 15 - high intensity white
     ]    
+
+    
   }
 }
 
