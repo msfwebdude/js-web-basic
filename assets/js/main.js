@@ -42,6 +42,8 @@ class WebBasic {
   }
 
   evaluateExpression(expression){
+    // TODO: actually parse the expression looking for functions and variables
+
     var keys = Object.keys(this.scalars)
     keys.forEach(
       key => {

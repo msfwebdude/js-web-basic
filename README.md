@@ -6,6 +6,9 @@
 # js-web-basic
 javascript gw-basic fun project
 
+## Try it out
+Try it out [here](http://firoved.com/github/js-web-basic/index.html)
+
 # purpose
 found an old project that I started for fun and started adding to it, I doubt it will have any practical use, just something fun to program
 
