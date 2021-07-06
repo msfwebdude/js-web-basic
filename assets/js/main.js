@@ -6,10 +6,10 @@ class WebBasic {
     this.version = '0.0.1'
     this.program = []
     this.scalars = {}
+    this.pointer = null
   }
 
   handleInput(keypress){
-    console.log(keypress)
     if(keypress.key == 'ArrowUp') {
       if(webBasic.lastCommand){
         self.commandWindow.value += webBasic.lastCommand
@@ -86,7 +86,29 @@ class WebBasic {
           else this.error(Illegal)
           break;
 
+        case "CLS":
+          this.clear()
+          break;
+
         case "RUN":
+          break;
+        
+        case "PSET":
+          let psetArgs = expression.split(',')
+          let posX = parseInt(psetArgs.shift().replace('(', '').trim())
+          let posY = parseInt(psetArgs.shift().replace(')', '').trim())
+          let tint = parseInt(psetArgs.shift() || '0')
+         
+          if(posX < 0 || posX > 1000 ) this.error('Illegal function call')
+          if(posY < 0 || posY > 1000 ) this.error('Illegal function call')
+          if(tint < 0 || tint > 15   ) this.error('Illegal function call')
+
+          let pointImageData  = this.drawing.createImageData(1,1)
+          pointImageData.data[0] = this.chromas[tint][0]
+          pointImageData.data[1] = this.chromas[tint][1]
+          pointImageData.data[2] = this.chromas[tint][2]
+          pointImageData.data[3] = this.chromas[tint][3]
+          this.drawing.putImageData(pointImageData, posX, posY)
           break;
 
         case "LIST":
@@ -209,6 +231,25 @@ class WebBasic {
     this.clear()
     this.write(`Web-BASIC v${this.version}\n(C) Copyright Mike Firoved (MIT License)\nOK\n\n`);
     self.commandWindow.focus()  
+    this.drawing = self.graphicsScreen.getContext('2d')
+    this.chromas = [
+      [  0,   0,   0, 255], //  0 - black
+      [  0,   0, 170, 255], //  1 - blue
+      [  0, 170,   0, 255], //  2 - green
+      [  0, 170, 170, 255], //  3 - cyan
+      [170,   0,   0, 255], //  4 - red
+      [170,   0, 170, 255], //  5 - magenta
+      [170,  84,   0, 255], //  6 - brown
+      [170, 170, 170, 255], //  7 - white
+      [ 84,  84,  84, 255], //  8 - gray
+      [ 84,  84, 255, 255], //  9 - light blue
+      [ 84, 255,  84, 255], // 10 - light green
+      [ 84, 255, 255, 255], // 11 - light cyan
+      [255,  85,  85, 255], // 12 - light red
+      [155,  84, 255, 255], // 13 - light magenta
+      [255, 255,  84, 255], // 14 - yellow
+      [255, 255, 255, 255], // 15 - high intensity white
+    ]    
   }
 }
 

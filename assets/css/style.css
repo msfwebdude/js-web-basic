@@ -9,6 +9,9 @@ body {
     margin: auto auto;
 }
 .main-arena textarea {
+    position: relative;
+    top: 0px;
+    left: 0px;;
     background-color: transparent;
     border: solid 1px lime;
     font-family: Consolas, 'Lucida Console', monospace;
@@ -18,4 +21,14 @@ body {
     height: 600px;
     outline: none;
     padding: 12px;
+    z-index: 200;
+}
+.main-arena canvas {
+    position: relative;
+    top: -630px;
+    left: 0px;
+    width: 824px;
+    height: 624px;
+    background-color: transparent;
+    z-index: 100;
 }
