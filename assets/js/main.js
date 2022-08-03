@@ -116,7 +116,7 @@ class WebBasic {
         case "LIST":
           this.program.forEach(
             (line) => {
-              if(line) this.write(line)
+              if(line) this.write(`  ${line}`)
             }
           )
           this.write('')
