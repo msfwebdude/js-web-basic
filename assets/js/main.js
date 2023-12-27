@@ -267,6 +267,8 @@ class WebBasic {
   }
 }
 
+
 let webBasic = new WebBasic()
+
 
 document.addEventListener("DOMContentLoaded", (e) => { webBasic.startUp() });
